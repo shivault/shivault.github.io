@@ -1,0 +1,79 @@
+<html>
+	<head>
+		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
+		<title>Der Kerker</title>
+		<style>
+    title{
+        font-family:serif
+    }
+    body{
+        background-color: black;
+        text-align: center;
+    }
+    h1{
+        color:green;
+    }
+    h3{
+        color:whitesmoke;
+    }
+    h4{
+        color:whitesmoke;
+    }
+    p{
+        color:whitesmoke;
+    }
+    img{
+        width: 200px;
+    }
+    .digital-clock{
+        width:175px;
+        background:green;
+        border-radius:10px;
+        font-family:Arial;
+        font-size:24px;
+        color:whitesmoke;
+        text-align:center;
+        letter-spacing: 3px;
+        padding: 10px;
+    }
+</style>
+	</head>
+	<body>
+		<div align="center">
+			<div class="digital-clock"/>
+		</div>
+		<script>
+    setInterval(()=>{
+        const time = document.querySelector(".digital-clock");
+        let date = new Date();
+        let hours =date.getHours();
+        let minutes = date.getMinutes();
+        let seconds = date.getSeconds();
+        let AM_PM = "AM";
+        
+        if (hours > 11){
+            AM_PM = "PM";
+            hours = hours - 12;
+    }
+        if (hours==0){
+            hours = 12
+    }
+        if (seconds < 10){ seconds="0" + seconds; } if (minutes
+			< 10){ minutes="0" + minutes; } if (hours
+			< 10){ hours="0" + hours; } time.textContent=hours +":" + minutes +":" + seconds +"" + AM_PM; });
+		</script>
+			<h1>Der Kerker</h1>
+			<h4>Forever Underground</h4>
+			<hr>
+				<a href="music.html">
+					<button style="background-color:#345352;color:whitesmoke;height:25px;width:80px">Music</button>
+				</a>
+				<br>
+					<a href="creatures.html">
+						<button style="background-color:#345352;color:whitesmoke;height:25px;width:80px">Creatures</button>
+					</a>
+					<p>Hello! You can click on the buttons to move to different sections of the website.</p>
+					<br>
+						<p>There are not many good repositories/archives of cryptids/folk creatures, so that is what I am working on currently. Its very barebones, but I hope to improve upon it over time.</p>
+					</body>
+				</html>
